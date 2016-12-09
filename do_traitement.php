@@ -7,14 +7,14 @@ for($i = 1; $i < 6; ++$i) {
         if($Tansaction["Type"][$i]=="Prélévement"){
             $ptr = fopen ("prelevement.text" , "a");
             if($ptr){
-                $string = time() . ";" . $Tansaction["Montant"][$i] . ";" . $Tansaction["Devise"][$i] . ";" . $Tansaction["CompteDebiteur"][$i] . ";" . $Tansaction["CompteEmetteur"][$i] . ";" . $_SESSION["Nom"] ."\n";
+                $string = time()+$i . ";" . $Tansaction["Montant"][$i] . ";" . $Tansaction["Devise"][$i] . ";" . $Tansaction["CompteDebiteur"][$i] . ";" . $Tansaction["CompteEmetteur"][$i] . ";" . $_SESSION["Nom"] ."\n";
                 fputs($ptr, $string);
                 fclose($ptr);
             }
         }else{
             $ptr = fopen ("virement.text" , "a");
             if($ptr){
-                $string = time() . ";" . $Tansaction["Montant"][$i] . ";" . $Tansaction["Devise"][$i] . ";" . $Tansaction["CompteDebiteur"][$i] . ";" . $Tansaction["CompteEmetteur"][$i] . ";" . $_SESSION["Nom"] ."\n";
+                $string = time()+$i . ";" . $Tansaction["Montant"][$i] . ";" . $Tansaction["Devise"][$i] . ";" . $Tansaction["CompteDebiteur"][$i] . ";" . $Tansaction["CompteEmetteur"][$i] . ";" . $_SESSION["Nom"] ."\n";
                 fputs($ptr, $string);
                 fclose($ptr);
             }
