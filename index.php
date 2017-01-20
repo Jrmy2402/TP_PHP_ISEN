@@ -37,7 +37,8 @@
         <input type="text" id="inputEmail" class="form-control" placeholder="User name" name="user"  autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" >
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        <a href="Inscription.php" class="btn btn-lg btn-danger btn-block" role="button">Inscription</a>
       </form>
 
     </div> <!-- /container -->

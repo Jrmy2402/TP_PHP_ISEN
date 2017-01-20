@@ -1,5 +1,4 @@
-<?php session_start();
-?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bonjour  <?php echo $_GET['user']?></a>
+          <a class="navbar-brand" href="#">Bonjour  <?php echo $_SESSION['Nom']?></a>
         </div>
       </div>
     </nav>
@@ -49,7 +48,7 @@
                 <div class="col-md-2">
                     <div class="input-group">
                         <span class="input-group-addon">Type</span>
-                        <select class="form-control" name="Tansaction[Type][<?php echo $i?>]">
+                        <select class="form-control" name="Transaction[Type][<?php echo $i?>]">
                             <option>Virement</option>
                             <option>Prélévement</option>
                         </select>
@@ -58,14 +57,14 @@
                 <div class="col-md-2">
                     <div class="input-group">
                         <span class="input-group-addon">Montant</span>
-                        <input name="Tansaction[Montant][<?php echo $i?>]" type="number" class="form-control" >
+                        <input name="Transaction[Montant][<?php echo $i?>]" type="number" step="0.01" class="form-control" >
                         <!--<span class="input-group-addon">.00</span>-->
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="input-group">
                         <span class="input-group-addon">Devise</span>
-                        <select class="form-control" name="Tansaction[Devise][<?php echo $i?>]">
+                        <select class="form-control" name="Transaction[Devise][<?php echo $i?>]">
                             <option>£</option>
                             <option>$</option>
                             <option>€</option>
@@ -75,13 +74,13 @@
                 <div class="col-md-3">
                     <div class="input-group">
                         <span class="input-group-addon">Compte débiteur</span>
-                        <input type="number" name="Tansaction[CompteDebiteur][<?php echo $i?>]" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input type="text" name="Transaction[CompteDebiteur][<?php echo $i?>]" class="form-control" aria-label="Amount (to the nearest dollar)">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="input-group">
                         <span class="input-group-addon">Compte emetteur</span>
-                        <input type="number" name="Tansaction[CompteEmetteur][<?php echo $i?>]" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input type="text" name="Transaction[CompteEmetteur][<?php echo $i?>]" class="form-control" aria-label="Amount (to the nearest dollar)">
                     </div>
                 </div>
             </div>
