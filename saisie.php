@@ -98,7 +98,7 @@ include 'session.php';
         </form>
         <div class="row margin">
             <div class="col-md-4 col-md-offset-8">
-                <a href="download.php" class="btn btn-lg btn-danger btn-block" role="button">Download file</a>
+                <a href="upload.php" class="btn btn-lg btn-danger btn-block" role="button">Download file</a>
             </div>
         </div>
     </div>

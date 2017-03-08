@@ -43,11 +43,12 @@ include 'session.php';
     </nav>
     <div class="container margin">
        <h1>Upload news files</h1>
-       <form enctype="multipart/form-data" action="upload.php" methode=post>
-          <input type="hidden" name="MAX_FILE_SIZE" value="1000">
-          Upload this file: <input name"userfile" type="file">
-          <input type="submit" value="Send file">
-       </form>
+       <form method="POST" action="do_upload.php" enctype="multipart/form-data">
+            <!-- On limite le fichier à 100Ko -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+            Fichier : <input type="file" name="userfile">
+            <input type="submit" name="envoyer" value="Envoyer le fichier">
+        </form>
     </div>
 </body>
 
