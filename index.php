@@ -1,4 +1,5 @@
 <?php session_start();
+session_destroy ();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +33,22 @@
     <div class="container">
 
       <form class="form-signin" action="do_authentification.php" method="post">
+        <?php
+            if(isset($_REQUEST["Error"])) {
+        ?>
+        <div class="alert alert-danger">
+          <strong>Error!</strong> <?php echo $_REQUEST['Error']?>.
+        </div>
+        <?php
+            }
+            if(isset($_REQUEST["Success"])) {
+        ?>
+        <div class="alert alert-success">
+          <strong>Success!</strong> <?php echo $_REQUEST['Success']?>.
+        </div>
+        <?php
+            }
+        ?>
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">User name</label>
         <input type="text" id="inputEmail" class="form-control" placeholder="User name" name="user"  autofocus>

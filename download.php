@@ -1,6 +1,7 @@
 <?php 
 include 'session.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,41 +29,25 @@ include 'session.php';
 
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-                <a class="navbar-brand" href="index.php">Bonjour  <?php echo $_SESSION["Nom"]?></a>
-            </div>
+          <a class="navbar-brand" href="index.php">Bonjour  <?php echo $_SESSION['Nom']?></a>
         </div>
+      </div>
     </nav>
     <div class="container margin">
-        <table class="table table-hover margin">
-            <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Mombre</th>
-                    <th>Montant</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">Virement</th>
-                    <td><?php echo $_GET["nbVir"]?></td>
-                    <td><?php echo $_GET["MontantVir"]?> €</td>
-                </tr>
-                <tr>
-                    <th scope="row">Prelévement</th>
-                    <td><?php echo $_GET["nbPre"]?></td>
-                    <td><?php echo $_GET["MontantPre"]?> €</td>
-                </tr>
-            </tbody>
-        </table>
+       <h1>Upload news files</h1>
+       <form enctype="multipart/form-data" action="upload.php" methode=post>
+          <input type="hidden" name="MAX_FILE_SIZE" value="1000">
+          Upload this file: <input name"userfile" type="file">
+          <input type="submit" value="Send file">
+       </form>
     </div>
 </body>
 

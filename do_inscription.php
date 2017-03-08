@@ -17,7 +17,7 @@ if(isset($_REQUEST["Nom"])  && isset($_REQUEST["Prenom"]) && isset($_REQUEST["pa
     $Resultat = $Requete_preparee->execute();
     echo "Resultat is :";
     echo $Resultat;
-    header('Location: index.php');
+    header('Location: index.php?Success=Inscription réussie');
 
     
 }else{

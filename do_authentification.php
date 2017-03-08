@@ -16,10 +16,11 @@ if(isset($_REQUEST["user"]) && isset($_REQUEST["password"]))  {
         $_SESSION['IdUser'] = $Valeur[0]['IdUser'];
         $_SESSION['Nom'] = $Valeur[0]['Nom'];
         echo "c'est good";
-        header('Location: saisie.php?user='.$_REQUEST["user"]);
+        header('Location: saisie.php');
     } else {
         echo "c'est PAS good";
-        header('Location: index.php');
+        session_destroy();
+        header('Location: index.php?Error=La connexion a échoué');
     }
     
 }else{

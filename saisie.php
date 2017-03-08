@@ -1,4 +1,6 @@
-<?php session_start();?>
+<?php 
+include 'session.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bonjour  <?php echo $_SESSION['Nom']?></a>
+          <a class="navbar-brand" href="index.php">Bonjour  <?php echo $_SESSION['Nom']?></a>
         </div>
       </div>
     </nav>
@@ -94,6 +96,11 @@
                 </div>
             </div>
         </form>
+        <div class="row margin">
+            <div class="col-md-4 col-md-offset-8">
+                <a href="download.php" class="btn btn-lg btn-danger btn-block" role="button">Download file</a>
+            </div>
+        </div>
     </div>
 </body>
 
