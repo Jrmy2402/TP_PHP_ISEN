@@ -101,6 +101,11 @@ include 'session.php';
                 <a href="upload.php" class="btn btn-lg btn-danger btn-block" role="button">Download file</a>
             </div>
         </div>
+        <div class="row margin">
+            <div class="col-md-4 col-md-offset-8">
+                <a href="testcmd.php" class="btn btn-lg btn-warning btn-block" role="button">Test cmd</a>
+            </div>
+        </div>
     </div>
 </body>
 
