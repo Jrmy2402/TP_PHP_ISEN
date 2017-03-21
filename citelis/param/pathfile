@@ -1,0 +1,43 @@
+#########################################################################
+#
+#	Pathfile 
+#
+#	Liste fichiers parametres utilises par le module de paiement
+#
+#########################################################################
+#
+#
+#-------------------------------------------------------------------------
+# Activation (YES) / D�sactivation (NO) du mode DEBUG
+#-------------------------------------------------------------------------
+#
+DEBUG!YES!
+#
+# ------------------------------------------------------------------------
+# Chemin vers le r�pertoire des logos depuis le web alias  
+# Exemple pour le r�pertoire www.merchant.com/citelis/payment/logo/
+# indiquer:
+# ------------------------------------------------------------------------
+#
+D_LOGO!/citelis/logo/!
+#
+# --------------------------------------------------------------------------
+#  Fichiers param�tres li�s a l'api citelis paiement	
+# --------------------------------------------------------------------------
+#
+# certificat du commercant
+#
+F_CERTIFICATE!d:\\CIPA5\\PHP\\TP1\\citelis\\param\\certif!
+#
+# fichier param�tre commercant
+#
+F_PARAM!d:\\CIPA5\\PHP\\TP1\\citelis\\param\\parmcom!
+#
+# fichier des  param�tres citelis
+#
+F_DEFAULT!d:\\CIPA5\\PHP\\TP1\\citelis\\param\\parmcom.citelis!
+#
+# --------------------------------------------------------------------------
+# 	end of file
+# --------------------------------------------------------------------------
+
